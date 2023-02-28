@@ -9,39 +9,60 @@ import java.util.List;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.ZonedDateTime;
 import java.util.Scanner;
 
 public class Track {
   
   private List<Point> listOfPoints;
   
-  public Track(String points, List<Point> listOfPoints){
-    this.listOfPoints = listOfPoints;
-
+  public Track(){
+    this.listOfPoints = new ArrayList<Point>();
   }
 
-  public static void readFile(String filename) throws IOException{
+  public void readFile(String filename) throws IOException{
     try {
       File csvFile = new File(filename);
       Scanner lines = new Scanner(csvFile);
       
       while (lines.hasNextLine()) {
         String line = lines.nextLine();
+
+        if (!line.isEmpty()) {
+          Scanner lineScanner = new Scanner(line);
+          lineScanner.useDelimiter(",");
+
+          ZonedDateTime readTime = ZonedDateTime.parse(lineScanner.next());
+          double readLon = Double.parseDouble(lineScanner.next());
+          double readLat = Double.parseDouble(lineScanner.next());
+          double readEla = Double.parseDouble(lineScanner.next());
+
+          Point readPoint = new Point(readTime, readLon, readLat, readEla);
+          listOfPoints.add(readPoint);
+          lineScanner.close();
+        }
+
       }
       lines.close();
+
     } catch (FileNotFoundException e) {
-      throw new IOException("Error: could not access file", e)
+      throw new IOException("Error: could not access file", e);
     }
   }
 
-  public static void add(Point point) {
-    List<Point> pointsList = new ArrayList<Point>();
-    pointsList.add(point);
+  public void add(Point point) {
+    listOfPoints.add(point);
   }
 
   public Point get(int index) {
-    return null;
-  }
+    try {
+        return listOfPoints.get(index);
+    } catch  {
+        System.out.println("Error: " + e.getMessage());
+        return null;
+    }
+}
+
 
   public int size() {
     return 0;

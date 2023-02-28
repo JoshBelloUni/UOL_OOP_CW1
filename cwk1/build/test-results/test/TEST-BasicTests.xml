@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BasicTests" tests="18" skipped="0" failures="9" errors="0" timestamp="2023-02-27T00:40:46" hostname="DESKTOP-2SQNTHL" time="0.077">
+<testsuite name="BasicTests" tests="18" skipped="0" failures="9" errors="0" timestamp="2023-02-28T11:52:56" hostname="LAPTOP-3G1BG9JP" time="0.135">
   <properties/>
-  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.025"/>
-  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.002"/>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.002"/>
-  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.006">
+  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.042"/>
+  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.004"/>
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.003"/>
+  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -98,7 +98,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.002">
+  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -192,7 +192,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.005">
+  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.011">
     <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (3 failures)&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;4&gt;&#13;&#10;     but: was &lt;0&gt;&#13;&#10;&#9;java.lang.NullPointerException: Cannot invoke &quot;Point.getElevation()&quot; because the return value of &quot;Track.get(int)&quot; is null&#13;&#10;&#9;java.lang.NullPointerException: Cannot invoke &quot;Point.getElevation()&quot; because the return value of &quot;Track.get(int)&quot; is null" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (3 failures)
 	java.lang.AssertionError: 
 Expected: is &lt;4&gt;
@@ -636,7 +636,7 @@ Cause 3: java.lang.NullPointerException: Cannot invoke &quot;Point.getElevation(
 </failure>
   </testcase>
   <testcase name="GPSException if latitude is too high" classname="BasicTests" time="0.002"/>
-  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.001">
+  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -730,8 +730,8 @@ Cause 3: java.lang.NullPointerException: Cannot invoke &quot;Point.getElevation(
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.001"/>
-  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.001">
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.003"/>
+  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -825,9 +825,9 @@ Cause 3: java.lang.NullPointerException: Cannot invoke &quot;Point.getElevation(
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.001"/>
-  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.002"/>
-  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.002"/>
+  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.002"/>
+  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.003"/>
+  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.001"/>
   <testcase name="Size of a Track returned correctly" classname="BasicTests" time="0.002">
     <failure message="org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;4&gt;&#13;&#10;     but: was &lt;0&gt;" type="org.opentest4j.MultipleFailuresError">org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)
 	java.lang.AssertionError: 
@@ -1051,7 +1051,7 @@ Expected: is &lt;4&gt;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.002">
+  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.003">
     <failure message="java.lang.AssertionError: &#13;&#10;Expected: is &lt;4&gt;&#13;&#10;     but: was &lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: is &lt;4&gt;
      but: was &lt;0&gt;
@@ -1145,8 +1145,8 @@ Expected: is &lt;4&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if longitude is too high" classname="BasicTests" time="0.001"/>
-  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.003">
+  <testcase name="GPSException if longitude is too high" classname="BasicTests" time="0.003"/>
+  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.011">
     <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;(-1.54772, 53.80394), 69.8 m&gt;&#13;&#10;     but: was null&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;(-1.54853, 53.80462), 72.5 m&gt;&#13;&#10;     but: was null&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;(-1.54942, 53.80524), 68.1 m&gt;&#13;&#10;     but: was null&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expected: is &lt;(-1.55083, 53.80547), 70.5 m&gt;&#13;&#10;     but: was null" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)
 	java.lang.AssertionError: 
 Expected: is &lt;(-1.54772, 53.80394), 69.8 m&gt;

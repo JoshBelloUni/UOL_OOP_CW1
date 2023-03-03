@@ -87,7 +87,7 @@ public class BasicTests {
   }
 
   @Test
-  @DisplayName("GPSException if longitude is too low")
+  @DisplayName("GPSException if latitude is too low")
   public void latitudeTooLow() {
     assertThrows(GPSException.class, () -> new Point(t1, 0.0, -90.5, 0.0));
   }

@@ -20,6 +20,14 @@ public class Track {
     this.listOfPoints = new ArrayList<Point>();
   }
 
+  public Track(String file) {
+    this.listOfPoints = new ArrayList<Point>();
+    try {
+      readFile(file);
+    } catch (IOException e) {
+    }
+  } 
+
   public void readFile(String filename) throws IOException {
     try (Scanner lines = new Scanner(new File(filename))) {
         int lineNumber = 0;
@@ -133,7 +141,7 @@ public class Track {
       throw new GPSException("Number of points must be greater than 2");
     }
     // compute distances from point i to i+1
-    // 'i < listOfPoints.size()-1' becauase 
+    // 'i < listOfPoints.size()-1' because we dont want to check the very last array element
     double distance = 0.0;
     for (int i = 0; i < listOfPoints.size()-1; i++) {
       distance = distance + Point.greatCircleDistance(listOfPoints.get(i), listOfPoints.get(i+1));
